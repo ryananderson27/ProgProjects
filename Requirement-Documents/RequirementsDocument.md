@@ -110,19 +110,19 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | User will receive their customized student account along with the inputted profile information  |
 | Flow of events | 1. The user enters their account username and password.<br>2. The user enters their contact information, including name, last name, WPI ID, email, and phone number.<br>3. The user enters additional information, such as their major, cumulative GPA, expected graduation date, etc.<br>4. The user selects the research topics they are interested in (e.g., “Machine Learning,” “High Performance Computing,” etc.).<br>5. System responds with a list of research fields.<br>6. User selects one or multiple fields from the given list.<br>7. The user selects the programming languages they are familiar with.<br>8. System responds with a list of programming languages.<br>9. User selects one or multiple languages from the given list.<br>10. User submits the account information.<br>11. System validates given account information.<br>12. If the inputted information is valid, the system adds the user’s new account to the database. |
 | Alternative flow of events    | In step 10, if the system doesn’t validate the user's information due to unfilled account information or incorrect details, the system prompts the user to correct the fields. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 1  |
 
 ---
 
 | Use case # 2      |   |
 | ------------------ |--|
-| Name              | Edit Account |
+| Name              | View and Edit Account |
 | Participating actor  | Student  |
 | Entry condition(s)     | User has an account  |
 | Exit condition(s)           | User’s account will be updated with valid inputted data  |
-| Flow of events | 1. User clicks “View Profile” button.<br>2. System responds by displaying the student’s current profile information.<br>3. User clicks on “Edit Profile.”<br>4. System responds with a similar form seen in the registration process but with the user’s current data filled in.<br>5. User makes changes and submits the account information.<br>6. System validates the given account information.<br>7. If inputted information is valid, the system updates the user’s account in the database. |
+| Flow of events | 1. User clicks “View Profile” button.<br>2. System responds by displaying the student’s current profile information.<br>3. User clicks on “Edit Profile.”<br>4. System responds with a similar form seen in the registration process but with the user’s current data filled in, except password.<br>5. User makes changes and submits the account information.<br>6. System validates the given account information.<br>7. If inputted information is valid, the system updates the user’s account in the database. |
 | Alternative flow of events    | In step 5, if the system doesn’t validate the user's information due to unfilled or incorrect fields, the system prompts the user to correct them. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 1  |
 
 ---
 
@@ -134,9 +134,11 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | User views a wide variety of available research projects  |
 | Flow of events | 1. User searches for research projects by filtering through multiple criteria, such as:<br> &nbsp; a. Title<br> &nbsp; b. Start/End Date<br> &nbsp; c. Required Time Commitment<br> &nbsp; d. Related Research Fields<br> &nbsp; e. Required Programming Languages (Boolean)<br> &nbsp; f. Research Project Leader<br>2. System takes these inputs and displays relevant available research projects.<br>3. User selects a specific research project to view expanded details.<br>4. System displays the detailed view of the selected research project. |
 | Alternative flow of events    | If the system does not validate the user’s search criteria due to missing or incorrect details, the system informs the user that no matching research projects exist. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 1  |
 
 ---
+
+Assuming the user wants to apply to the position and that the student can exit at any time by canceling the application.
 
 | Use case # 4      |   |
 | ------------------ |--|
@@ -146,7 +148,7 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | User’s application for a given research project is submitted  |
 | Flow of events | 1. User clicks the “Apply” button on a research project.<br>2. System prompts the user to:<br> &nbsp; a. Fill out a brief statement describing why they are interested in the research topic and what they hope to gain from participating.<br> &nbsp; b. Input the name and email of one faculty member who can provide a reference for the position.<br>3. User fills out the required information.<br>4. The system validates the information, sends a message to the faculty member for a recommendation, and updates the application status to pending. |
 | Alternative flow of events    | In step 2, if the user submits an empty “Position Interest” field or enters a faculty member who doesn’t exist in the database, the system prompts the user to correct these fields. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 2  |
 
 ---
 
@@ -158,9 +160,23 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | User’s application can either be accepted, denied, or rescinded by the user  |
 | Flow of events | 1. User selects the “View Application Status” button in their profile.<br>2. System responds by displaying the applied research projects, including:<br> &nbsp; - Title<br> &nbsp; - Start/End Date<br> &nbsp; - Research Lead<br> &nbsp; - The research position applied for<br> &nbsp; - The status of their application<br> &nbsp; - The recommendation status from their requested faculty member. |
 | Alternative flow of events    | In step 2, if the application is still pending, the user has the option to withdraw the application from the given research project. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 2  |
 
-| Use case # 1      |   |
+---
+
+| Use case # 6      |   |
+| ------------------ |--|
+| Name              | View Reference Request Status |
+| Participating actor  | Student  |
+| Entry condition(s)     | A student has already provided the name and email of a faculty member who can provide them the reference  |
+| Exit condition(s)           | The student views the status of the reference.  |
+| Flow of events | 1. The user views the application statuses page and selects References.<br>2. The software responds by presenting the name of each faculty member listed as a reference and the status of their reference as "Pending" or "Complete". |
+| Alternative flow of events    |- In step 2, the user can select reference and remove them.<br>- In step 2, if a faculty member has rejected a reference request, it should appear as "Rejected."<br>- In step 2, if a reference appears as pending, the student may send a reminder to the faculty member. The student selects the "Send a Reminder" option. The software responds by asking for a message to send with the reminder. The student inputs a message and selects "Send." The software responds by confirming that the reminder was sent and notifying the faculty member. |
+| Iteration # | 3  |
+
+---
+
+| Use case # 1F      |   |
 | ------------------ |--|
 | Name              | Create Research Listing |
 | Participating actor  | Faculty  |
@@ -168,23 +184,23 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | Research project job specifications are posted according to faculty preferences.  |
 | Flow of events | 1. User presses "Add Undergraduate Research Position".<br>2. System prompts the user to fill out the following fields:<br> &nbsp; a. Research project title<br> &nbsp; b. Brief description of project goals and objectives<br> &nbsp; c. Start and end date<br> &nbsp; d. Required time commitment (e.g., 10 hours per week)<br> &nbsp; e. Number of available positions for the given role<br> &nbsp; f. Research field<br> &nbsp; g. Required experience with programming languages (e.g., "C++", "Java", "Python").<br>3. User fills out the required fields and presses the "Submit" button.<br>4. System validates the input data and adds the job posting to the database. |
 | Alternative flow of events    | In step 3, if the system doesn’t validate the user's information due to missing or incorrect details, the system prompts the user to correct the fields. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 1  |
 
 ---
 
-| Use case # 2      |   |
+| Use case # 2F      |   |
 | ------------------ |--|
 | Name              | View Applied Students |
 | Participating actor  | Faculty  |
 | Entry condition(s)     | User is a WPI faculty member with an account who has previously posted a research position and is currently viewing the research project page.  |
 | Exit condition(s)           | User views all students who have applied for a given undergraduate research position.  |
-| Flow of events | 1. User selects the "View Applicants" button.<br>2. System displays a list of applicants, including:<br> &nbsp; a. Name<br> &nbsp; b. Major<br> &nbsp; c. Graduation Year<br> &nbsp; d. WPI ID<br> &nbsp; e. Profile Picture.<br>3. System allows the user to expand an applicant’s profile to view their full application. |
+| Flow of events | 1. User selects the "View Applicants" button.<br>2. System displays a list of applicants, including:<br> &nbsp; a. Name<br> &nbsp; b. Major<br> &nbsp; c. Graduation Year<br> &nbsp; d. WPI ID<br> 3. System allows the user to expand an applicant’s profile to view their full application. <br> 4. User selects filter and sorting preferences for applied students list. <br> 5. System responds by sorting the list of students who have applied based on specifications of the user.|
 | Alternative flow of events    | If no one has applied for the position, the system displays a "No Applicants Yet" message. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 2  |
 
 ---
 
-| Use case # 3      |   |
+| Use case # 3F      |   |
 | ------------------ |--|
 | Name              | View Student Qualifications |
 | Participating actor  | Faculty  |
@@ -192,9 +208,46 @@ You may use the following table template for your use cases. Copy-paste this tab
 | Exit condition(s)           | User reviews the applicant’s qualifications.  |
 | Flow of events | 1. System displays the applicant’s profile, including:<br> &nbsp; a. GPA<br> &nbsp; b. Research topics of interest<br> &nbsp; c. Programming language proficiency<br> &nbsp; d. Prior research experience<br> &nbsp; e. Faculty reference and whether the recommendation is approved<br> &nbsp; f. Student’s submitted statement of interest. |
 | Alternative flow of events    | None specified. |
-| Iteration #         | "enter your response here"  |
+| Iteration # | 2  |
 
 ----
+
+| Use case # 4F     |   |
+| ------------------ |--|
+| Name              | Accept / Reject Student Applicants |
+| Participating actor  | Faculty  |
+| Entry condition(s)     | User clicked on the “View Profile” button of a student who has applied for their research position.  |
+| Exit condition(s)           | User exits the “View Profile” page of the student they are reviewing. |
+| Flow of events | 1. System displays a green “accept” button and a red “reject” button on the profile page of a student who has applied for their research position. <br> 2. User can accept as many students as there are positions available under the research position. <br> 3. System will set the status on the student's application as either “Approved” or “Rejected”. |
+| Alternative flow of events    | If the user attempts to accept more students than there are positions available, the user will be advised that all positions for the position are filled. |
+| Iteration # | 2  |
+
+---
+
+| Use case # 5F      |   |
+| ------------------ |--|
+| Name              | Completing a Reference Request |
+| Participating actor  | Faculty  |
+| Entry condition(s)     | A student has entered the faculty member as a reference for their application. |
+| Exit condition(s)           | The faculty member has completed the request for a reference. |
+| Flow of events | 1. The user views the profile page and selects References.<br>2. The software responds by presenting the name of each student who has submitted a reference request to the user.<br>3. The user responds by selecting a student and accepting the reference request.<br>4. The software responds by prompting the user for a letter of recommendation.<br> 5. The user responds by inputting a letter of recommendation and submitting the reference.<br>6. The software responds by confirming that the request is complete and notifying the student that the reference has been received.<br>7. The software also removes the students name from the list of pending reference requests. |
+| Alternative flow of events    |- In step 3, the user can reject the reference request. The software responds by confirming that the request is complete and notifying the student that the reference request has been rejected. The software also removes the students name from the list of pending reference requests.|
+| Iteration # | 3  |
+
+---
+
+| Use case # 6F      |   |
+| ------------------ |--|
+| Name              | View and Edit Account |
+| Participating actor  | Faculty  |
+| Entry condition(s)     | User has an account  |
+| Exit condition(s)           | User’s account will be updated with valid inputted data  |
+| Flow of events | 1. User clicks “View Profile” button.<br>2. System responds by displaying the faculty’s current profile information.<br>3. User clicks on “Edit Profile.”<br>4. System responds with a similar form seen in the registration process but with the user’s current data filled in, except password.<br>5. User makes changes and submits the account information.<br>6. System validates the given account information.<br>7. If inputted information is valid, the system updates the user’s account in the database. |
+| Alternative flow of events    | In step 5, if the system doesn’t validate the user's information due to unfilled or incorrect fields, the system prompts the user to correct them. |
+| Iteration # | 1  |
+
+---
+
 # 3. User Interface
 
 Here you should include the sketches or mockups for the main parts of the interface.
