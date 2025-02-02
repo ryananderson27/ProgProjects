@@ -74,9 +74,10 @@ This section specifies the software product's requirements. Specify all of the s
 |Apply to open research projects. | Approve or reject students from positions I have posted. |
 |Submit a personal statement with my applications. | View applications of students who have applied for my research positions so that I can learn more about them. |
 |Request letters of recommendation from faculty members so that I can have references for applications. | View references for students. |
-|View the status of research positions I have applied to. | View the status of my research projects. |
-|Check my inbox so that I know if a faculty member has submitted recommendations for me. | View my inbox so that I can know if a student needs a recommendation from me. | 
-|Check my inbox so that I know if I may view acceptance and rejection letters. | Accept or reject a student's request to me to recommend them. |
+|View the status of my completed applications. | View the status of my research projects. |
+|Check my inbox so that I know if a faculty member has submitted recommendations for me. | View my inbox so that I can know if a student needs a recommendation from me. |
+|Send a reminder to faculty members about reference requests. |View reminders for reference requests so I don't forget any. |
+|Check my inbox so that I can view acceptance and rejection letters. | Accept or reject a student's request to me to recommend them. |
 |Withdraw pending applications so that I may discontinue my application process for a research position. | Optionally write a recommendation letter so that I may speak on a student's qualifications. |
 
 
