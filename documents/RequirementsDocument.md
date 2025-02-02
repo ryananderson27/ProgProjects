@@ -284,7 +284,7 @@ You may use Figma to design your interface: -->
 ----
 # 4. Product Backlog
 
-Here you should include a link to your GitHub repo issues page, i.e., your product backlog. Make sure to create an issue for each user story.  
+[Product Backlog Link](https://github.com/WPI-CS3733-2025C/team-dominators/issues) 
 
 ----
 # 5. References
