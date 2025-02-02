@@ -72,7 +72,7 @@ This section specifies the software product's requirements. Specify all of the s
 |Sort/Filter the search results for research projects so that I can find projects more similar to my interests. | Add information to my research projects such as a description, research fields, and time commitment so that students can be more informed about my project. |
 |View details of research projects so that I learn more about projects. | See students who have applied to research positions so that I may know their qualifications and if they are approved for other research positions. |
 |Apply to open research projects. | Approve or reject students from positions I have posted. |
-|Submit a statement of interest in my applications. | View applications of students who have applied for my research positions so that I can learn more about them. |
+|Submit a personal statement with my applications. | View applications of students who have applied for my research positions so that I can learn more about them. |
 |Request letters of recommendation from faculty members so that I can have references for applications. | View references for students. |
 |View the status of research positions I have applied to. | View the status of my research projects. |
 |Check my inbox so that I know if a faculty member has submitted recommendations for me. | View my inbox so that I can know if a student needs a recommendation from me. | 
