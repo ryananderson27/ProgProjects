@@ -249,6 +249,18 @@ Assuming the user wants to apply to the position and that the student can exit a
 
 ---
 
+| Use case # 7F      |   |
+| ------------------ |--|
+| Name              | Edit Research Listing |
+| Participating actor  | Faculty  |
+| Entry condition(s)     | User is a WPI faculty member with an existing research project and is currently viewing their project page.  |
+| Exit condition(s)           | Updated research project specifications are posted according to faculty preferences.  |
+| Flow of events | 1. User presses "Edit Research Project Listing".<br>2. System prompts the user to edit the following fields:<br> &nbsp; a. Research project title<br> &nbsp; b. Brief description of project goals and objectives<br> &nbsp; c. Start and end date<br> &nbsp; d. Required time commitment (e.g., 10 hours per week)<br> &nbsp; e. Number of available positions for the given role<br> &nbsp; f. Research field<br> &nbsp; g. Required experience with programming languages (e.g., "C++", "Java", "Python").<br>3. User fills out the desired fields and presses the "Submit" button.<br>4. System validates the input data and adds the job posting to the database. |
+| Alternative flow of events    | In step 3, if the system doesn’t validate the user's information due to missing or incorrect details, the system prompts the user to correct the fields. |
+| Iteration # | 1  |
+
+---
+
 # 3. User Interface
 
 Here you should include the sketches or mockups for the main parts of the interface.
