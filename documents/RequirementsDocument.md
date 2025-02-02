@@ -263,12 +263,22 @@ Assuming the user wants to apply to the position and that the student can exit a
 
 # 3. User Interface
 
-Here you should include the sketches or mockups for the main parts of the interface.
-You may use Figma to design your interface:
-
-  Example image. The image file is in the `./images` directory.
+<!-- Here you should include the sketches or mockups for the main parts of the interface.
+You may use Figma to design your interface: -->
+  ## Mock Up Pages
   <kbd>
-      <img src="images/figma.jpg"  border="2">
+    <img src="images/Login.jpg"></img>
+    <img src="images/Home.jpg"></img>
+    <img src="images/Home_Dropdown.jpg"></img>
+    <img src="images/Profile.png"></img>
+    <img src="images/Edit_Profile.png"></img>
+    <img src="images/Inbox.jpg"></img>
+    <img src="images/Submissions.png"></img>
+    <img src="images/Browser.jpg"></img>
+    <img src="images/Search.png"></img>
+    <img src="images/Project_Page.png"></img>
+    <img src="images/Project_Proposal.jpg"></img>
+    
   </kbd>
   
 ----
