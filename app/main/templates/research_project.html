@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container mt-3">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+      {% for message in messages %}
+      <div class="alert alert-info" role="alert">{{ message }}</div>
+      {% endfor %}
+    {% endif %}
+    {% endwith %}
+    <div class = "research-body">
+      <div class = "research-outline">
+          <h1 class = "research-title"></h1>{{research_project.name}}</h1> <br>
+          <img src ="{{url_for('static', filename ='img/comp_sci.png')}}" class = "img" >
+          <p class ="mt-3">{{research_project.description}}</p>
+          <h5>Timeline</h5>
+          <p>{{research_project.timeline}}</p>
+          <h5>Recommended Skills</h5>
+          <ul>
+              {%for skill in research_project.skills %}
+              <li>{{skill.name}}</li>
+          </ul>
+          <h5>Affiliated Majors</h5>
+          <p>{{research_project.majors }}</p>
+          <h5>Research Lead</h5>
+          <p>
+              <strong>{{research_project.faculty.name}}</strong> <br>
+              Department: {{research_project.faculty.department}} <br>
+              Email:{{research_project.faculty.email}}
+          </p>
+      </div>
+    </div>
+
+    {% endblock %}

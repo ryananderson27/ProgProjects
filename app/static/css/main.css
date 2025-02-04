@@ -1,13 +1,13 @@
 body {
-    margin: 0;
-    padding: 1em;
-    font-family: Tahoma;
-    font-size : 18px;
-}
+	font-family: 'Myriad Pro', sans-serif;
+	font-size: 18px;
+	background-color: #f8f9fa;
+	padding: 1em;
+  }
 
 .nav-container {
-	background:#f6f6f6;
-	font-family: Tahoma;
+	background-color: #AC2B37;
+	font-family: 'Myriad Pro', sans-serif;
 	font-size: 12px;
 	height: 32px;
 	text-transform: uppercase;
@@ -136,3 +136,26 @@ h3.bluetitle {
 	padding: 1px 0px 1px 0px;
 }
 
+.research-body{
+	border-radius: 8px;
+	box-shadow: 0 4px 8px black;
+}
+
+.research-outline{
+	padding: 20px
+}
+
+.research-title{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-coloring{
+	color: #0d6efd
+}
+
+/* https://www.pngkey.com/maxpic/u2q8i1r5t4r5i1y3/ */
