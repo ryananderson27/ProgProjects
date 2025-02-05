@@ -149,8 +149,9 @@ h3.bluetitle {
 }
 
 .research-title{
-	font-size: 24px;
+	font-size: 28px;
 	font-weight: bold;
+	text-transform: capitalize;
 }
 
 .text-center {

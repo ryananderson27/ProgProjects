@@ -1,14 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<div class="container mt-3">
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
-      {% for message in messages %}
-      <div class="alert alert-info" role="alert">{{ message }}</div>
-      {% endfor %}
-    {% endif %}
-    {% endwith %}
     <div class = "research-body">
       <div class = "research-outline">
           <h1 class = "research-title"></h1>{{research_project.name}}</h1> <br>
