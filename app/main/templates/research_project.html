@@ -16,13 +16,16 @@
           <p class ="mt-3">{{research_project.description}}</p>
           <h5>Timeline</h5>
           <p>{{research_project.timeline}}</p>
+          <p>{{research_project.commitment}}</p>
           <h5>Recommended Skills</h5>
+          <p>{{research_project.positions}}</p>
           <ul>
               {%for skill in research_project.skills %}
               <li>{{skill.name}}</li>
           </ul>
-          <h5>Affiliated Majors</h5>
-          <p>{{research_project.majors }}</p>
+          <!-- Probably should edit this portion to display research fields -->
+          <h5>Affiliated Topics</h5>
+          <p>{{research_project.Topic }}</p>
           <h5>Research Lead</h5>
           <p>
               <strong>{{research_project.faculty.name}}</strong> <br>
