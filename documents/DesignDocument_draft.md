@@ -67,39 +67,36 @@ This document serves to overview the structure and design of our team's software
 * You can use the following table template to list your route specifications. 
 * Organize this section according to your module decomposition, i.e., include a sub-section for each module and list all routes for that sub-section in a table.   -->
 
-#### 2.2.2.1 \main Routes
+#### 2.2.2.1 /main Routes
 
-|   | Methods           | URL Path   | Description  |
-|:--|:------------------|:-----------|:-------------|
-|1. |                   |            |              |
-|2. |                   |            |              |
-|3. |                   |            |              |
+|   | Function           | URL Path   | Methods  | Description  |
+|:--|:------------------|:-----------|:-------------| :-------------|
+|1. |index|/,/index|GET| Renders home page dependant on current user type, requires login, redirects to login if no user is signed in.
+|2. |displayProfile|/user/\<user-id\>|GET|Renders the correct profile template based on the current users type and populates it with current user info. Redirects to index if user not signed in.|
+|3. |updateUser|/user/\<user-id\>/edit|GET, POST| Renders user profile edit template and parses edit profile form to update account, redirects to profile.
+|4. |createTopic|/topic/create|GET, POST|Renders topic (research field or programming language) creation form/template, adds new topic to the database. Requires current user to be faculty, redirects to index if not.|
+|5. |createProject|/project/create|GET, POST|Renders project creation form/template, adds new project to the database. Requires current user to be faculty, redirects to index if not.|
+|6. |editProject|/project/\<project-id\>/edit|GET, POST|Renders project edit form/template, edits project details in database. Requires current user to be faculty, redirects to index if not.|
+|7. |displayProjects|/project/view|GET|Renders project browser template, displays all projects in database. Requires login, redirects to index.|
+
+#### 2.2.2.2 /auth Routes
+
+|   | Function           | URL Path   | Methods  | Description  |
+|:--|:------------------|:-----------|:-------------| :-------------|
+|1. |registerUser|/user/register| GET, POST | Renders user registration template and parses registration form to make new users, redirects to index.|
+|2. |login|/user/login|GET, POST| Renders login template with the login form and parses data to authenticate the user, redirects to index.|
+|3. |logout|/user/logout|POST|Logs the current user out, redirects to login.|
 |4. |                   |            |              |
 |5. |                   |            |              |
 |6. |                   |            |              |
 
-#### 2.2.2.2 \auth Routes
 
-|   | Methods           | URL Path   | Description  |
-|:--|:------------------|:-----------|:-------------|
-|1. |                   |            |              |
-|2. |                   |            |              |
-|3. |                   |            |              |
-|4. |                   |            |              |
-|5. |                   |            |              |
-|6. |                   |            |              |
+#### 2.2.2.2 /errors Routes
 
-
-#### 2.2.2.2 \errors Routes
-
-|   | Methods           | URL Path   | Description  |
-|:--|:------------------|:-----------|:-------------|
-|1. |                   |            |              |
-|2. |                   |            |              |
-|3. |                   |            |              |
-|4. |                   |            |              |
-|5. |                   |            |              |
-|6. |                   |            |              |
+|   | Function           | URL Path   | Methods  | Description  |
+|:--|:------------------|:-----------|:-------------|:-------------|
+|1. |not_found_error|/error/404|GET| Handles invalid route errors|
+|2. |internal_error|/error/500|GET|Handles internal/server errors.|
 
 ### 2.3 User Interface Design 
 
