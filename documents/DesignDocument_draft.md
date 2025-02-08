@@ -41,7 +41,7 @@ Prepared by:
 
 <!-- Explain the purpose of this document. If this is a revision of an earlier document, please make sure to summarize what changes have been made during the revision (keep this discussion brief).  -->
 
-
+This document serves to overview the structure and design of our team's software.
 
 # 2. Software Design
 
