@@ -102,6 +102,33 @@ This document serves to overview the structure and design of our team's software
 
 <!-- Provide a list of the page templates you plan to create and supplement your description with UI sketches or screenshots.  -->
 
+  ## Mock Up Pages
+  <kbd>
+    Image of login template
+    <img src="images/Login.jpg"></img>
+    Image of home template
+    <img src="images/Home.jpg"></img>
+    Image of home page with user dashboard dropdown template 
+    <img src="images/Home_Dropdown.jpg"></img>
+    Image of user profile template
+    <img src="images/Profile.png"></img>
+    Image of edit user profile template
+    <img src="images/Edit_Profile.png"></img>
+    Image of user inbox template
+    <img src="images/Inbox.jpg"></img>
+    Image of project submission template
+    <img src="images/Submissions.png"></img>
+    Image of project browser 
+    <img src="images/Browser.jpg"></img>
+    Image of project search template 
+    <img src="images/Search.png"></img>
+    Image of individual project research page
+    <img src="images/Project_Page.png"></img>
+    Image of project proposal page
+    <img src="images/Project_Proposal.jpg"></img>
+    
+  </kbd>
+
 # 3. References
 
 None
