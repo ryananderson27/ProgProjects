@@ -19,7 +19,7 @@ class RegistrationForm(FlaskForm):
      ID = IntegerField('WPI ID', validators=[DataRequired(), Length(min=9,max=9)])
      password = PasswordField('Password', validators= [DataRequired()])
      password2 = PasswordField('Repeat Password', validators= [DataRequired(), EqualTo('password')])
-     Student = SubmitField('Register')
+     register = SubmitField('Register')
 
      def validate_username(self, username):
         query = sqla.select(User).where(User.username == username.data)
@@ -49,25 +49,29 @@ class RegistrationForm(FlaskForm):
 class StudentRegistrationForm(FlaskForm):
      #Maybe make since a dropdown?
      gpa = DecimalField('Cumulative GPA', validators= [DataRequired()], places=3, rounding=None)
-     grad = DateField('Expected Graduation Date', format='%Y-%m-%d', default=datetime.now())
+     grad = DateField('Expected Graduation Date', 
+                      validators= [DataRequired()], 
+                      format='%Y-%m-%d', 
+                      default=datetime.now)
      #This might need some editing, my idea is that we have all the projects in the data in there own class
      # and we have a object that designates what topic they fall under, like a Soft Eng project would fall under 'CS'
      #Open to changes, and by all means if there is a better way to do this, go ahead.
-     topics = QuerySelectMultipleField('Research Topics',
-                                       query_factory = lambda : db.session.scalars(sqla.select(Projects.topic).order_by(Project)),
-                                       get_label = lambda theTopic : theTopic.name,
-                                       widget = ListWidget(prefix_label=False),
-                                       option_widget =CheckboxInput())
-     code = QuerySelectMultipleField('Research Topics',
-                                       query_factory = lambda : db.session.scalars(sqla.select(Projects.code).order_by(Project)),
-                                       get_label = lambda theCode : theCode.name,
-                                       widget = ListWidget(prefix_label=False),
-                                       option_widget =CheckboxInput())
+    #  topics = QuerySelectMultipleField('Research Topics',
+    #                                    query_factory = lambda : db.session.scalars(sqla.select(Projects.topic).order_by(Project)),
+    #                                    get_label = lambda theTopic : theTopic.name,
+    #                                    widget = ListWidget(prefix_label=False),
+    #                                    option_widget =CheckboxInput())
+    #  code = QuerySelectMultipleField('Research Topics',
+    #                                    query_factory = lambda : db.session.scalars(sqla.select(Projects.code).order_by(Project)),
+    #                                    get_label = lambda theCode : theCode.name,
+    #                                    widget = ListWidget(prefix_label=False),
+    #                                    option_widget =CheckboxInput())
      majors = QuerySelectMultipleField('Majors', 
-                query_factory = lambda : db.session.scalars(sqla.select(Major).order_by(Major.name)),
-                get_label = lambda theMajor : theMajor.name,
-                widget=ListWidget(prefix_label=False),
-                option_widget=CheckboxInput())
+                                       query_factory = lambda : db.session.scalars(sqla.select(Major).order_by(Major.name)),
+                                       get_label = lambda theMajor : theMajor.name,
+                                       widget=ListWidget(prefix_label=False),
+                                       option_widget=CheckboxInput())
+     register = SubmitField('Register')
 
 
 class LoginForm(FlaskForm):

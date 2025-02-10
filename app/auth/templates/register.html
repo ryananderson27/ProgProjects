@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% import 'bootstrap_wtf.html' as wtf %}
 
 {% block content %}
     <h1>Register</h1>
@@ -63,7 +64,7 @@
         {% endfor %}
     </p>
 
-    <p> {{form.submit(class="button") }}</p>
+    <p> {{form.register(class="button") }}</p>
     </form>
 
 {% endblock %}
