@@ -136,6 +136,20 @@ The following is a UML Database Diagram of our Database, with association tables
     <img src="images/Project_Page.png"></img>
     Image of project proposal page
     <img src="images/Project_Proposal.jpg"></img>
+    Image of create topic template
+    <img src="images/create_topic.jpg"></img>
+    Image of edit faculty profile template
+    <img src="images/edit_faculty_profile.jpg"></img>
+    Image of faculty profile template
+    <img src="images/faculty_profile.jpg"></img>
+    Image of inbox email template
+    <img src="images/inbox_email.jpg"></img>
+    Image of personal statement creation template
+    <img src="images/personal_statement.jpg"></img>
+    Image of individual project applicants template
+    <img src="images/project_applicants.jpg"></img>
+    Image of list of project applicants template
+    <img src="images/project_applicants_list.jpg"></img>
     
   </kbd>
 
