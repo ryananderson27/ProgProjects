@@ -73,22 +73,28 @@ This document serves to overview the structure and design of our team's software
 |:--|:------------------|:-----------|:-------------| :-------------|
 |1. |index|/,/index|GET| Renders home page dependant on current user type, requires login, redirects to login if no user is signed in.
 |2. |displayProfile|/user/\<user-id\>|GET|Renders the correct profile template based on the current users type and populates it with current user info. Redirects to index if user not signed in.|
-|3. |updateUser|/user/\<user-id\>/edit|GET, POST| Renders user profile edit template and parses edit profile form to update account, redirects to profile.
-|4. |createTopic|/topic/create|GET, POST|Renders topic (research field or programming language) creation form/template, adds new topic to the database. Requires current user to be faculty, redirects to index if not.|
-|5. |createProject|/project/create|GET, POST|Renders project creation form/template, adds new project to the database. Requires current user to be faculty, redirects to index if not.|
-|6. |editProject|/project/\<project-id\>/edit|GET, POST|Renders project edit form/template, edits project details in database. Requires current user to be faculty, redirects to index if not.|
-|7. |displayProjects|/project/view|GET|Renders project browser template, displays all projects in database. Requires login, redirects to index.|
+|3. |editProfile|/user/profile/\<user-id\>/edit|GET, POST| Renders user profile edit template and parses edit profile form to update account, redirects to profile.
+|4. |createProject|/project/create|GET, POST|Renders project creation form/template, adds new project to the database. Requires current user to be faculty, redirects to index if not.|
+|5. |editProject|/project/\<project-id\>/edit|GET, POST|Renders project edit form/template, edits project details in database. Requires current user to be faculty, redirects to index if not.|
+|6. |displayProjects|/project/view|GET|Renders project browser template, displays all projects in database. Requires login, redirects to index.|
+|7. |displayProjectData|/project/\<project_id\>/view|GET|Renders project browser template, displays a single project in database. Requires login, redirects to index.|
+|8. |createLang|/topic/lang/create|GET, POST|Renders create topic template with LangForm object, validates form and creates a new ResearchTopic with type 'language'. Faculty only.|
+|9. |createField|/project/field/create|GET, POST|Renders create topic template with FieldForm object, validates form and creates a new ResearchTopic with type 'field'. Faculty only.|
+|10. |apply|/project/\<project_id\>/apply|GET, POST|Renders application template with ApplyForm object, validates form and creates a new application object. Student only.|
+|11. |viewApplicants|/project/\<project_id\>/applicants|GET, POST|Displays all students who have applied for a given project. Receives POST requests to sort applications. Highlights applicants who match all position requirements.| Faculty only.|
+|12. |decideApplicant|/project/\<project_id\>/applicants/\<user_id\>|GET, POST|Displays a specific students application, and allows faculty to decide on that applications (accept/reject), a note can be attached to the decision and the student is notified following the decision. Faculty only.|
+|13. |requestReference|/user/\<faculty_id\>/reference|GET, POST|Renders reference request template with RefRequestForm object, validates form and creates a new reference request for the faculty member. Notifies the faculty member. Student only.|
+|14. |completeReference|/user/\<student_id\>/reference|GET, POST|Renders reference writing template with ReferenceForm object, validates form and creates a new reference for the student. Notifies the student. Faculty only.|
+|15. |inbox|/user/\<user_id\>/inbox|GET, POST|Displays all inbox messages for each user. Receives POST requests to sort the inbox.|
 
 #### 2.2.2.2 /auth Routes
 
 |   | Function           | URL Path   | Methods  | Description  |
 |:--|:------------------|:-----------|:-------------| :-------------|
-|1. |registerUser|/user/register| GET, POST | Renders user registration template and parses registration form to make new users, redirects to index.|
-|2. |login|/user/login|GET, POST| Renders login template with the login form and parses data to authenticate the user, redirects to index.|
+|1. |registerUser|/user/register| GET, POST | Renders user registration template and parses registration form to make new users, redirects to index. If the provided email is in the list of existing faculty members, create a faculty account, otherwise create a student account.|
+|2. |login|/user/login|GET, POST| Renders login template with the login form and parses data to authenticate the user. If user is finished registration it logs the user in and redirects to index, if the user is a student who has not finished registration, it redirects to studentRegister.|
 |3. |logout|/user/logout|POST|Logs the current user out, redirects to login.|
-|4. |                   |            |              |
-|5. |                   |            |              |
-|6. |                   |            |              |
+|4. |studentRegister|/user/register/student/\<user_id\>|GET, POST|Renders the second part of the student registration form/template. Validates the form and finishes creating a new student user.|
 
 
 #### 2.2.2.2 /errors Routes
