@@ -33,7 +33,7 @@ Prepared by:
 
 | Name | Date | Changes | Version |
 | ------ | ------ | --------- | --------- |
-|Revision 1 |2024-11-15 |Initial draft | 1.0        |
+|Revision 1 |2025-02-13 |Initial draft | 1.0        |
 |      |      |         |         |
 
 
@@ -41,7 +41,7 @@ Prepared by:
 
 <!-- Explain the purpose of this document. If this is a revision of an earlier document, please make sure to summarize what changes have been made during the revision (keep this discussion brief).  -->
 
-This document serves to overview the structure and design of our team's software.
+This document serves to overview the structure and design of our team's software. 
 
 # 2. Software Design
 
@@ -50,8 +50,18 @@ This document serves to overview the structure and design of our team's software
 ## 2.1 Database Model
 
 <!-- Provide a list of your tables (i.e., SQL Alchemy classes) in your database model and briefly explain the role of each table.  -->
+|Table|Members|Example Fields|
+|-|-|-|
+|User|Users of the program and their information. |wpi id, phone number, name, email|
+|Faculty|Users which have been registered as faculty members of WPI. Must have a wpi faculty email.|created topics|
+|Student|Users which are not faculty members.|gpa, graduation date|
+|ResearchTopic|Either a research field which students and projects may affiliate with or language which student may claim proficiency.|topic name, topic type, creator|
+|ResearchProject|Projects created by faculty.|project name, start date, end date, number of positions, creator|
+|Major|Different majors which students can associate themselves with.|name, abbreviated name|
 
 <!-- Provide a UML diagram of your database model showing the associations and relationships among tables.  -->
+The following is a UML Database Diagram of our Database, with association tables.
+<img src="images/UML_Database_Models.png"></img>
 
 ## 2.2 Modules and Interfaces
 
