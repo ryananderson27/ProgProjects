@@ -66,7 +66,9 @@ The following is a UML Database Diagram of our Database, with association tables
 ## 2.2 Modules and Interfaces
 
 ### 2.2.1 Overview
+The software application is structured into five distinct modules: Client, Model, Auth, Main, and Error Handlers. The Client module, represented by the browser, initiates HTTP requests to interact with the application. The Model module functions as the data layer, defining the data schema and managing database tables through SQLAlchemy, which facilitates communication with an SQLite database. The remaining application logic is divided into three interconnected subsystems. The Auth subsystem handles user authentication, including registration and login. The Main module contains the core functionality of the application, processing requests and executing business logic. The Error Handlers module is responsible for managing system responses to errors, such as 404 (Not Found) and 500 (Internal Server Error). These subsystems communicate primarily through redirects. The Client sends HTTP requests to the appropriate subsystem endpoints, which process the requests and return responses accordingly.
 
+<img src="images/ComponentDiagramDraft1Submission.drawio.png"></img>
 <!-- Describe the high-level architecture of your software:  i.e., the major components/modules and how they fit together. Provide a UML component diagram that illustrates the architecture of your software. Briefly mention the role of each module in your architectural design. Please refer to the "System Level Design" lectures in Week 4.  -->
 
 ### 2.2.2 Interfaces
