@@ -26,9 +26,47 @@ List team members and their GitHub usernames
  <!-- * Include as summary of your `Iteration-1` accomplishments.  -->
  During this past iteration, our team was able to...
  <!-- * List the user stories completed in `Iteration-1`. Mention who worked on those user stories.  -->
- |Task|User Story|Assignee|
- |-|-|-|
- ||||
+ |#|User Story|
+ |-|-|
+ |38|As a faculty member I would like view my account.|
+ |31|As a faculty member, I would like to register an account.|
+ |17|As a faculty member, I would like to add information to my research projects such as a description, research fields, and time commitment so that students can be more informed about my project.|
+ |15|As a faculty member, I would like to create new research projects.|
+ |14|As a faculty member, I would like to list my research projects on my account so that students can find projects which I am associated with.|
+ |12|As a faculty member, I would like to edit my account details.|
+ |8|As a student, I would like to view details of research projects so that I learn more about projects.|
+ |7|As a student, I would like to browse open research projects so that I can find projects to apply to.|
+ |6|As a student, I would like to edit my account details so that I can add information into my account.|
+ |5|As a student, I would like to view my account.|
+ |4|As a student, I would like to login to my account.|
+ |3|As a student, I would like to register for account.|
+
+
+ |#|Task|User Story #|Assignee|
+ |-|-|-|-|
+ |54|Create an "update project" form for editing project details.|17|Brandon|
+ |53|Create a route in the Flask app to handle updating project details.|17|Chase|
+ |52|Create routes for project creation form.|15|Chase|
+ |51|Design page for project creation with associated html template.|15|Brandon|
+ |50|Design a interface for editing research project details and create associated HTML template.|17|Brandon|
+ |49|Develop a edit profile form for the Flask app to allow students and faculty to edit their profile information.|6,12|Matt|
+ |48|Design HTML template for displaying a faculty members research projects.|14|Brandon|
+ |47|Create a Flask route for retrieving the details of a specific research project and passing those details to a template.|8|Matt
+ |46|Design an interface for viewing a single research project and its details. Create a corresponding HTML template.|8|Ryan|
+ |45|Add a route in the Flask app for retrieving research project listings and rendering the page with all open projects.|7|Chase|
+ |44|Faculty "create project" Form.|15|Matt|
+ |43|Design a page for browsing open research projects, and create a corresponding HTML template.|7|Brandon|
+ |42|Create a "Project" model in the database for storing the details of research projects.|7,8,15,17|Chase|
+ |41|Design an edit profile interface for both students and faculty and create a HTML template for each.|5,6,12,38|Ryan|
+ |40|Create routes in the Flask app for displaying student profile pages and faculty profile pages.|5,38|Matt|
+ |39|Design a student profile page and faculty profile page along with HTML templates for each.|5,38|Ryan|
+ |37|Develop a login form for the Flask app and create a route to handle login attempts.|4,10|Chase|
+ |35|Design the login interface and create a corresponding HTML template.|4,10|Ryan|
+ |34|Create "User", "Student" and "Faculty" models in the database for storing user profile information.|3,31|Chase|
+ |33|Develop the user registration form for the Flask app and add route to handle user registrations.|3,31|Matt|
+ |32|Design the user registration interface and create a corresponding HTML Template.|3,31|Ryan|
+
+
 
 ----
 ## 3. Iteration 1 - Sprint Retrospective
