@@ -39,6 +39,20 @@ List team members and their GitHub usernames
 ----
 ## 5. Iteration 2 - Sprint Backlog
 
-Include a draft of your `Iteration-2 spring backlog`. 
- * List the user stories you plan to complete in `Iteration-2`. Make sure to break down the larger user stories into smaller size stories. Mention the team member(s) who will work on each user story. 
- * Make sure to update the "issues" on your GitHub repo accordingly.  
+## Student Features
+- As a student, I would like to withdraw pending applications so that I may discontinue my application process for a research position. (Brandon)
+- As a student, I would like to view the status of my completed applications. (Brandon)
+- As a student, I would like to submit a personal statement with my applications. (Brandon)
+- As a student, I would like to apply to open research projects. (Ryan)
+
+## Faculty Features
+- As a faculty member, I would like to view the number of students that I have already accepted into my research project. (Matt)
+- As a faculty member, I would like to view the list of applied applicants. (Chase)
+- As a faculty member, I would like to view the list of applicants and see their application status, whether I accepted or rejected them, or if their application is still pending. (Chase)
+- As a faculty member, I would like to view references for students. (Ryan)
+- As a faculty member, I would like to view applications of students who have applied for my research positions so that I can learn more about them. (Ryan)
+- As a faculty member, I would like to approve or reject students from positions I have posted. (Matt)
+- As a faculty member, I would like to see students who have applied to research positions to determine if they have been accepted into other research projects. (Chase)
+- As a faculty member, I would like to view any given personal statement that the student has submitted when they applied for my research project. (Ryan)
+- As a faculty member, I would also like it if, during this process, I have easy viewing access to the applied student’s profile while reviewing their personal statement and their application responses. (Matt)
+
