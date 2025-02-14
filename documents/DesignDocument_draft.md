@@ -33,7 +33,7 @@ Prepared by:
 
 | Name | Date | Changes | Version |
 | ------ | ------ | --------- | --------- |
-|Revision 1 |2024-11-15 |Initial draft | 1.0        |
+|Revision 1 |2025-02-13 |Initial draft | 1.0        |
 |      |      |         |         |
 
 
@@ -41,7 +41,7 @@ Prepared by:
 
 <!-- Explain the purpose of this document. If this is a revision of an earlier document, please make sure to summarize what changes have been made during the revision (keep this discussion brief).  -->
 
-This document serves to overview the structure and design of our team's software.
+This document serves to overview the structure and design of our team's software. 
 
 # 2. Software Design
 
@@ -50,13 +50,25 @@ This document serves to overview the structure and design of our team's software
 ## 2.1 Database Model
 
 <!-- Provide a list of your tables (i.e., SQL Alchemy classes) in your database model and briefly explain the role of each table.  -->
+|Table|Members|Example Fields|
+|-|-|-|
+|User|Users of the program and their information. |wpi id, phone number, name, email|
+|Faculty|Users which have been registered as faculty members of WPI. Must have a wpi faculty email.|created topics|
+|Student|Users which are not faculty members.|gpa, graduation date|
+|ResearchTopic|Either a research field which students and projects may affiliate with or language which student may claim proficiency.|topic name, topic type, creator|
+|ResearchProject|Projects created by faculty.|project name, start date, end date, number of positions, creator|
+|Major|Different majors which students can associate themselves with.|name, abbreviated name|
 
 <!-- Provide a UML diagram of your database model showing the associations and relationships among tables.  -->
+The following is a UML Database Diagram of our Database, with association tables.
+<img src="images/UML_Database_Models.png"></img>
 
 ## 2.2 Modules and Interfaces
 
 ### 2.2.1 Overview
+The software application is structured into five distinct modules: Client, Model, Auth, Main, and Error Handlers. The Client module, represented by the browser, initiates HTTP requests to interact with the application. The Model module functions as the data layer, defining the data schema and managing database tables through SQLAlchemy, which facilitates communication with an SQLite database. The remaining application logic is divided into three interconnected subsystems. The Auth subsystem handles user authentication, including registration and login. The Main module contains the core functionality of the application, processing requests and executing business logic. The Error Handlers module is responsible for managing system responses to errors, such as 404 (Not Found) and 500 (Internal Server Error). These subsystems communicate primarily through redirects. The Client sends HTTP requests to the appropriate subsystem endpoints, which process the requests and return responses accordingly.
 
+<img src="images/ComponentDiagramDraft1Submission.drawio.png"></img>
 <!-- Describe the high-level architecture of your software:  i.e., the major components/modules and how they fit together. Provide a UML component diagram that illustrates the architecture of your software. Briefly mention the role of each module in your architectural design. Please refer to the "System Level Design" lectures in Week 4.  -->
 
 ### 2.2.2 Interfaces
@@ -132,6 +144,20 @@ This document serves to overview the structure and design of our team's software
     <img src="images/Project_Page.png"></img>
     Image of project proposal page
     <img src="images/Project_Proposal.jpg"></img>
+    Image of create topic template
+    <img src="images/create_topic.jpg"></img>
+    Image of edit faculty profile template
+    <img src="images/edit_faculty_profile.jpg"></img>
+    Image of faculty profile template
+    <img src="images/faculty_profile.jpg"></img>
+    Image of inbox email template
+    <img src="images/inbox_email.jpg"></img>
+    Image of personal statement creation template
+    <img src="images/personal_statement.jpg"></img>
+    Image of individual project applicants template
+    <img src="images/project_applicants.jpg"></img>
+    Image of list of project applicants template
+    <img src="images/project_applicants_list.jpg"></img>
     
   </kbd>
 
