@@ -33,8 +33,17 @@ List team members and their GitHub usernames
 ----
 ## 3. Iteration 1 - Sprint Retrospective
 
- * Include the outcome of your `Iteration-1 Scrum retrospective meetings`. 
- * Mention the changes the team will be doing to improve itself as a result of the Scrum reflections.
+During our Iteration-1 Scrum retrospective, our team reflected on the strengths of our process and identified areas for improvement to enhance our workflow in future iterations.
+
+One of the key successes of our first iteration was maintaining concise and effective meetings. With an average of four Scrum meetings per week—one of which typically served as a working session—we felt well-coordinated and consistently left meetings with a clear sense of direction. This structure allowed us to remain aligned and ensure smooth collaboration throughout the iteration.
+
+However, we also recognized areas where we can improve. First, we want to focus on working more consistently to prevent last-minute crunch situations. By spreading our workload more evenly, we can complete integrations earlier, allowing team members to work with fully developed components. For instance, ensuring that form/routes are created ahead of time will enable smoother testing of HTML templates by other team members.
+
+Another improvement goal is to be more vigilant about testing before pushing code. We identified two potential approaches to this: developers can either create a test stub for their code or wait until the dependent component is ready. If they choose the latter, they will create a Git issue assigned to themselves as a reminder to revisit the implementation once testing becomes possible. Additionally, they will notify the relevant team member to track dependencies and facilitate smoother collaboration.
+
+To further enhance our development process, we will work on breaking down tasks into smaller, well-defined Git issues. This will provide better structure and clarity, making the development process more manageable. Lastly, we aim to be more cognizant of task ownership, ensuring that team members focus on their assigned work without unintentionally overlapping with others’ responsibilities.
+
+Overall, our team felt that our agile implementation was successful for the first iteration, but with these refinements, we believe we can further improve efficiency, collaboration, and code quality in the next iteration.
 
 ----
 ## 4. Product Backlog refinement
