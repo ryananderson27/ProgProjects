@@ -6,7 +6,7 @@ List team members and their GitHub usernames
 
 * `Brandon Proteau`,`bproteau0`
 * `Matt Amodea`,`mattsamo66`
-* `<member3>`,`<username3>`
+* `Chase Carstensen`,`chase12803`
 * `Ryan Anderson`,`ryananderson27`
 
 ---
@@ -90,9 +90,9 @@ Overall, our team felt that our agile implementation was successful for the firs
 
 Besides finishing nearly all tasks created for the first iteration, we have moved a couple tasks from iteration 1 to iteration 2: 
  - SSO login
- - Index page for faculty members
+ - Index page for students and faculty members
  
-Also, we decided to add AWS deployment to iteration 2.
+These are currently high priority tasks for us. Also, we decided to add AWS deployment to iteration 2. Otherwise, we remain confident in our existing product backlog. 
 
 ----
 ## 5. Iteration 2 - Sprint Backlog
