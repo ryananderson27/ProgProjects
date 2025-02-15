@@ -91,21 +91,23 @@ Overall, our team felt that our agile implementation was successful for the firs
 ----
 ## 5. Iteration 2 - Sprint Backlog
 
-# User Stories
+### Iteration 2 User Stories
 
-## Student Features
-- As a student, I would like to withdraw pending applications so that I may discontinue my application process for a research position. (Brandon)
-- As a student, I would like to view the status of my completed applications. (Brandon)
-- As a student, I would like to submit a personal statement with my applications. (Brandon)
-- As a student, I would like to apply to open research projects. (Ryan)
+| #  | User Story | Assignee |
+|----|-----------|----------|
+| 27 | As a student, I would like to withdraw pending applications so that I may discontinue my application process for a research position. | Brandon |
+| 22 | As a faculty member, I would like to view references for students. | Ryan |
+| 21 | As a faculty member, I would like to view applications of students who have applied for my research positions so that I can learn more about them. | Ryan |
+| 20 | As a faculty member, I would like to approve or reject students from positions I have posted. | Matt |
+| 18 | As a faculty member, I would like to see students who have applied to research positions to determine if they have been accepted into other research projects. | Chase |
+| 16 | As a student, I would like to view the status of my completed applications. | Brandon |
+| 11 | As a student, I would like to submit a personal statement with my applications. | Brandon |
+| 9  | As a student, I would like to apply to open research projects. | Ryan |
+| 82 | As a faculty member, I would like to view the list of applied applicants. | Chase |
+| 83 | As a faculty member, I would like to view the list of applicants and see their application status, whether I accepted or rejected them, or if their application is still pending. | Chase |
+| 84 | As a faculty member, I would like to view any given personal statement that the student has submitted when they applied for my research project. | Ryan |
+| 86 | As a faculty member, I would like to have easy viewing access to the applied student’s profile while reviewing their personal statement and their application responses. | Matt |
+| 87 | As a faculty member, I would like to view the number of students that I have already accepted into my research project. | Matt |
 
-## Faculty Features
-- As a faculty member, I would like to view the number of students that I have already accepted into my research project. (Matt)
-- As a faculty member, I would like to view the list of applied applicants. (Chase)
-- As a faculty member, I would like to view the list of applicants and see their application status, whether I accepted or rejected them, or if their application is still pending. (Chase)
-- As a faculty member, I would like to view references for students. (Ryan)
-- As a faculty member, I would like to view applications of students who have applied for my research positions so that I can learn more about them. (Ryan)
-- As a faculty member, I would like to approve or reject students from positions I have posted. (Matt)
-- As a faculty member, I would like to see students who have applied to research positions to determine if they have been accepted into other research projects. (Chase)
-- As a faculty member, I would like to view any given personal statement that the student has submitted when they applied for my research project. (Ryan)
-- As a faculty member, I would also like it if, during this process, I have easy viewing access to the applied student’s profile while reviewing their personal statement and their application responses. (Matt)
+
+
