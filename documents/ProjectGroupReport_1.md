@@ -7,7 +7,7 @@ List team members and their GitHub usernames
 * `<member1>`,`<username1>`
 * `<member2>`,`<username2>`
 * `<member3>`,`<username3>`
-* `<member4>`,`<username4>`
+* `Ryan Anderson`,`ryananderson27`
 
 ---
 **Course** : CS 3733 - Software Engineering
@@ -39,6 +39,8 @@ List team members and their GitHub usernames
 ----
 ## 5. Iteration 2 - Sprint Backlog
 
+# User Stories
+
 ## Student Features
 - As a student, I would like to withdraw pending applications so that I may discontinue my application process for a research position. (Brandon)
 - As a student, I would like to view the status of my completed applications. (Brandon)
@@ -55,4 +57,3 @@ List team members and their GitHub usernames
 - As a faculty member, I would like to see students who have applied to research positions to determine if they have been accepted into other research projects. (Chase)
 - As a faculty member, I would like to view any given personal statement that the student has submitted when they applied for my research project. (Ryan)
 - As a faculty member, I would also like it if, during this process, I have easy viewing access to the applied student’s profile while reviewing their personal statement and their application responses. (Matt)
-
