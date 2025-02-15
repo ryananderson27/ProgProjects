@@ -86,7 +86,13 @@ Overall, our team felt that our agile implementation was successful for the firs
 ----
 ## 4. Product Backlog refinement
 
- * Have you made any changes to your `product backlog` after `Iteration-1`? If so, please explain the changes here. 
+ <!-- * Have you made any changes to your `product backlog` after `Iteration-1`? If so, please explain the changes here.  -->
+
+Besides finishing nearly all tasks created for the first iteration, we have moved a couple tasks from iteration 1 to iteration 2: 
+ - SSO login
+ - Index page for faculty members
+ 
+Also, we decided to add AWS deployment to iteration 2.
 
 ----
 ## 5. Iteration 2 - Sprint Backlog
