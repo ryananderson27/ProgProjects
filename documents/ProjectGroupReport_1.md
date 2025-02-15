@@ -5,7 +5,7 @@
 List team members and their GitHub usernames
 
 * `Brandon Proteau`,`bproteau0`
-* `<member2>`,`<username2>`
+* `Matt Amodea`,`mattsamo66`
 * `<member3>`,`<username3>`
 * `Ryan Anderson`,`ryananderson27`
 
