@@ -1,0 +1,45 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User Profile</h1>
+    <div class = "border rounded-3 bg-light p-2"> 
+        <h2> Username: {{user.get_username()}} </h2>
+        <p> <b> Name:</b> {% if user.get_firstname() %} {{user.get_firstname()}} {% endif%}
+                        {% if user.get_lastname() %} {{user.get_lastname()}} {% endif%} </p>
+        <p> <b> Email:</b> {% if user.get_email() %} {{user.get_email()}} {% endif%}</p>
+        <p> <b> Phone Number:</b> {% if user.get_phone_number() %} {{user.get_phone_number()}} {% endif%}</p>
+        <p> <b> WPI ID:</b> {% if user.get_ID() %} {{user.get_ID()}} {% endif%}</p>
+        <hr>
+
+        <!-- {% if user.get_research_projects()%}
+            <b>Research Projects: </b>
+            {% for research_projects in user.get_research_projects(): %}
+                <a href="{{url_for('main.get_research_projects', research_project_id = research_project.id)}}" class = "btn btn-outline-info"> {{research_project.get_name()}} - {{research_project.get_department()}} </a>
+                &nbsp;
+            {% endfor %}
+        {% else %}
+            <p> user is not associated with any research projects! </p>
+        {% endif %}
+         -->
+    </div>
+
+    {% if user.id == current_user.id %}
+            <p> <a href="{{ url_for('main.edit_profile') }}" class="btn btn-primary mt-3 fs-6">Edit your profile</a></p>
+    {% endif %}
+
+    <hr class ="solid">
+
+    <!-- {% if user.enrolled_courses() %}
+        <p> <b>Enrolled Courses: </b></p>
+        {% for enrollment in user.enrolled_courses() %}
+            {% set course = enrollment.get_course() %}
+            {% include '_course.html'%}
+        {% endfor%}
+    {% else %}
+    <p> user is not enrolled in any courses!</p>
+    {%endif%} -->
+
+    <hr>
+
+{% endblock %}
