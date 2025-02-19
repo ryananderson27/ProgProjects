@@ -55,10 +55,10 @@ This document serves to overview the structure and design of our team's software
 |User|Users of the program and their information. |wpi id, phone number, name, email|
 |Faculty|Users which have been registered as faculty members of WPI. Must have a wpi faculty email.|created topics|
 |Student|Users which are registered as a wpi student. Students have wpi email addresses.|gpa, graduation date|
-|ResearchTopic|Either a research field which students and projects may affiliate with or language which student may claim proficiency.|topic name, topic type, creator|
+|ResearchTopic|Either a research field which students and projects may affiliate with or language which student may claim proficiency. Professors may create research topics and destroy topics which they have made.|topic name, topic type, creator|
 |ResearchProject|Projects created by faculty. Each Research Project will have their own page which displays information on the project and has a way for Student users to apply to join the project.|project name, start date, end date, number of positions, creator|
 |Major|Different majors which students can associate themselves with. For example: 'Aerospace Engineering', 'Mathematical Sciences', etc.|name, abbreviated name|
-|Application|Information from the applications for joining research projects filled out by students. Each application should be associated with a single Student (who filled it out) and a single Research Project (which the application is for).||
+|Application|Information from the applications for joining research projects filled out by students. Each application should be associated with a single Student (who filled it out) and a single Research Project (which the application is for).|student id, project id, status, student statements|
 
 <!-- Provide a UML diagram of your database model showing the associations and relationships among tables.  -->
 The following is a UML Database Diagram of our Database, with association tables.
