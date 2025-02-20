@@ -62,7 +62,7 @@ This document serves to overview the structure and design of our team's software
 
 <!-- Provide a UML diagram of your database model showing the associations and relationships among tables.  -->
 The following is a UML Database Diagram of our Database, with association tables.
-<img src="images/UML_Database_Models.png"></img>
+<img src="images/UML_Database_Models (1).png"></img>
 
 ## 2.2 Modules and Interfaces
 
