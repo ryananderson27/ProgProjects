@@ -33,15 +33,15 @@ Prepared by:
 
 | Name | Date | Changes | Version |
 | ------ | ------ | --------- | --------- |
-|Revision 1 |2024-11-15 |Initial draft | 1.0        |
-|      |      |         |         |
+|Revision 1 |2025-02-13 |Initial draft | 1.0        |
+|Revision 2 |2025-02-20 |Final draft   | 2.0        |
 
 
 # 1. Introduction
 
 <!-- Explain the purpose of this document. If this is a revision of an earlier document, please make sure to summarize what changes have been made during the revision (keep this discussion brief).  -->
 
-This document serves to overview the structure and design of our team's software.
+This document serves to overview the structure and design of our team's software. 
 
 # 2. Software Design
 
@@ -50,13 +50,26 @@ This document serves to overview the structure and design of our team's software
 ## 2.1 Database Model
 
 <!-- Provide a list of your tables (i.e., SQL Alchemy classes) in your database model and briefly explain the role of each table.  -->
+|Table|Members|Example Fields|
+|-|-|-|
+|User|Users of the program and their information. |wpi id, phone number, name, email|
+|Faculty|Users which have been registered as faculty members of WPI. Must have a wpi faculty email.|created topics|
+|Student|Users which are registered as a wpi student. Students have wpi email addresses.|gpa, graduation date|
+|ResearchTopic|Either a research field which students and projects may affiliate with or language which student may claim proficiency. Professors may create research topics and destroy topics which they have made.|topic name, topic type, creator|
+|ResearchProject|Projects created by faculty. Each Research Project will have their own page which displays information on the project and has a way for Student users to apply to join the project.|project name, start date, end date, number of positions, creator|
+|Major|Different majors which students can associate themselves with. For example: 'Aerospace Engineering', 'Mathematical Sciences', etc.|name, abbreviated name|
+|Application|Information from the applications for joining research projects filled out by students. Each application should be associated with a single Student (who filled it out) and a single Research Project (which the application is for).|student id, project id, status, student statements|
 
 <!-- Provide a UML diagram of your database model showing the associations and relationships among tables.  -->
+The following is a UML Database Diagram of our Database, with association tables.
+<img src="images/UML_Database_Models (1).png"></img>
 
 ## 2.2 Modules and Interfaces
 
 ### 2.2.1 Overview
+The software application is structured into five distinct modules: Client, Model, Auth, Main, and Error Handlers. The Client module, represented by the browser, initiates HTTP requests to interact with the application. The Model module functions as the data layer, defining the data schema and managing database tables through SQLAlchemy, which facilitates communication with an SQLite database. The remaining application logic is divided into three interconnected subsystems. The Auth subsystem handles user authentication, including registration and login. The Main module contains the core functionality of the application, processing requests and executing business logic. The Error Handlers module is responsible for managing system responses to errors, such as 404 (Not Found) and 500 (Internal Server Error). These subsystems communicate primarily through redirects. The Client sends HTTP requests to the appropriate subsystem endpoints, which process the requests and return responses accordingly.
 
+<img src="images/ComponentDiagramDraft1Submission.drawio.png"></img>
 <!-- Describe the high-level architecture of your software:  i.e., the major components/modules and how they fit together. Provide a UML component diagram that illustrates the architecture of your software. Briefly mention the role of each module in your architectural design. Please refer to the "System Level Design" lectures in Week 4.  -->
 
 ### 2.2.2 Interfaces
@@ -73,22 +86,28 @@ This document serves to overview the structure and design of our team's software
 |:--|:------------------|:-----------|:-------------| :-------------|
 |1. |index|/,/index|GET| Renders home page dependant on current user type, requires login, redirects to login if no user is signed in.
 |2. |displayProfile|/user/\<user-id\>|GET|Renders the correct profile template based on the current users type and populates it with current user info. Redirects to index if user not signed in.|
-|3. |updateUser|/user/\<user-id\>/edit|GET, POST| Renders user profile edit template and parses edit profile form to update account, redirects to profile.
-|4. |createTopic|/topic/create|GET, POST|Renders topic (research field or programming language) creation form/template, adds new topic to the database. Requires current user to be faculty, redirects to index if not.|
-|5. |createProject|/project/create|GET, POST|Renders project creation form/template, adds new project to the database. Requires current user to be faculty, redirects to index if not.|
-|6. |editProject|/project/\<project-id\>/edit|GET, POST|Renders project edit form/template, edits project details in database. Requires current user to be faculty, redirects to index if not.|
-|7. |displayProjects|/project/view|GET|Renders project browser template, displays all projects in database. Requires login, redirects to index.|
+|3. |editProfile|/user/profile/\<user-id\>/edit|GET, POST| Renders user profile edit template and parses edit profile form to update account, redirects to profile.
+|4. |createProject|/project/create|GET, POST|Renders project creation form/template, adds new project to the database. Requires current user to be faculty, redirects to index if not.|
+|5. |editProject|/project/\<project-id\>/edit|GET, POST|Renders project edit form/template, edits project details in database. Requires current user to be faculty, redirects to index if not.|
+|6. |displayProjects|/project/view|GET|Renders project browser template, displays all projects in database. Requires login, redirects to index.|
+|7. |displayProjectData|/project/\<project_id\>/view|GET|Renders project browser template, displays a single project in database. Requires login, redirects to index.|
+|8. |createLang|/topic/lang/create|GET, POST|Renders create topic template with LangForm object, validates form and creates a new ResearchTopic with type 'language'. Faculty only.|
+|9. |createField|/project/field/create|GET, POST|Renders create topic template with FieldForm object, validates form and creates a new ResearchTopic with type 'field'. Faculty only.|
+|10. |apply|/project/\<project_id\>/apply|GET, POST|Renders application template with ApplyForm object, validates form and creates a new application object. Student only.|
+|11. |viewApplicants|/project/\<project_id\>/applicants|GET, POST|Displays all students who have applied for a given project. Receives POST requests to sort applications. Highlights applicants who match all position requirements.| Faculty only.|
+|12. |decideApplicant|/project/\<project_id\>/applicants/\<user_id\>|GET, POST|Displays a specific students application, and allows faculty to decide on that applications (accept/reject), a note can be attached to the decision and the student is notified following the decision. Faculty only.|
+|13. |requestReference|/user/\<faculty_id\>/reference|GET, POST|Renders reference request template with RefRequestForm object, validates form and creates a new reference request for the faculty member. Notifies the faculty member. Student only.|
+|14. |completeReference|/user/\<student_id\>/reference|GET, POST|Renders reference writing template with ReferenceForm object, validates form and creates a new reference for the student. Notifies the student. Faculty only.|
+|15. |inbox|/user/\<user_id\>/inbox|GET, POST|Displays all inbox messages for each user. Receives POST requests to sort the inbox.|
 
 #### 2.2.2.2 /auth Routes
 
 |   | Function           | URL Path   | Methods  | Description  |
 |:--|:------------------|:-----------|:-------------| :-------------|
-|1. |registerUser|/user/register| GET, POST | Renders user registration template and parses registration form to make new users, redirects to index.|
-|2. |login|/user/login|GET, POST| Renders login template with the login form and parses data to authenticate the user, redirects to index.|
+|1. |registerUser|/user/register| GET, POST | Renders user registration template and parses registration form to make new users, redirects to index. If the provided email is in the list of existing faculty members, create a faculty account, otherwise create a student account.|
+|2. |login|/user/login|GET, POST| Renders login template with the login form and parses data to authenticate the user. If user is finished registration it logs the user in and redirects to index, if the user is a student who has not finished registration, it redirects to studentRegister.|
 |3. |logout|/user/logout|POST|Logs the current user out, redirects to login.|
-|4. |                   |            |              |
-|5. |                   |            |              |
-|6. |                   |            |              |
+|4. |studentRegister|/user/register/student/\<user_id\>|GET, POST|Renders the second part of the student registration form/template. Validates the form and finishes creating a new student user.|
 
 
 #### 2.2.2.2 /errors Routes

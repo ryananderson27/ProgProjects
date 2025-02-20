@@ -1,0 +1,72 @@
+
+{% extends "base.html" %}
+
+{% block content %}
+    <h1>User Profile</h1>
+    <div class = "border rounded-3 bg-light p-2"> 
+        <h2> Username: {{user.get_username()}} </h2>
+        <p> <b> Name:</b> {% if user.get_firstname() %} {{user.get_firstname()}} {% endif%}
+                        {% if user.get_lastname() %} {{user.get_lastname()}} {% endif%} </p>
+        <p> <b> Email:</b> {% if user.get_email() %} {{user.get_email()}} {% endif%}</p>
+        <p> <b> Phone Number:</b> {% if user.get_phone_number() %} {{user.get_phone_number()}} {% endif%}</p>
+        <p> <b> WPI ID:</b> {% if user.get_ID() %} {{user.get_ID()}} {% endif%}</p>
+        <p> <b> Current GPA :</b> {% if user.get_gpa() %} {{user.get_gpa()}} {% endif%}</p>
+        <p> <b> Graduation Year :</b> {% if user.get_grad_year() %} {{user.get_grad_year()}} {% endif%}</p>
+        <p> <b> Research Experience :</b> {% if user.get_research_projects() %} {{user.get_research_projects()}} {% endif%}</p>
+        
+        <hr>
+        <!-- I don't know if this is going to work, we will probably have to edit this as we add methods -->
+        {% if user.topics()%}
+            <b>Topics {{user.get_firstname()}} finds interesting </b>
+            {% for topic in user.get_topics(): %}
+                <a href="{{url_for('main.get_topics', get_topics_id = get_topics.id)}}" class = "btn btn-outline-info"> {{topics.get_name()}} </a>
+                &nbsp;
+            {% endfor %}
+        {% else %}
+            <p> {{user.get_firstname()}} isn't interested in anything. </p>
+        {% endif %}
+        
+        <hr>
+        <!-- I don't know if this is going to work, we will probably have to edit this as we add methods -->
+        {% if user.code()%}
+            <b>Coding Languages {{user.get_firstname()}} knows: </b>
+            {% for codes in user.get_code(): %}
+                <a href="{{url_for('main.get_code', get_code_id = get_code.id)}}" class = "btn btn-outline-info"> {{code.get_name()}} </a>
+                &nbsp;
+            {% endfor %}
+        {% else %}
+            <p> {{user.get_firstname()}} doesn't know any coding languages. </p>
+        {% endif %}
+
+        <hr>
+        <!-- I don't know if this is going to work, we will probably have to edit this as we add methods -->
+        {% if user.get_majors()%}
+            <b>Major: </b>
+            {% for major in student.get_majors(): %}
+                <a href="{{url_for('main.get_user_in_major', major_id = major.id)}}" class = "btn btn-outline-info"> {{major.get_name()}} </a>
+                &nbsp;
+            {% endfor %}
+        {% else %}
+            <p> {{firstname}} is not associated with any majors! </p>
+        {% endif %}
+    </div>
+
+    {% if user.id == current_user.id %}
+            <p> <a href="{{ url_for('main.edit_profile') }}" class="btn btn-primary mt-3 fs-6">Edit your profile</a></p>
+    {% endif %}
+
+    <hr class ="solid">
+
+    <!-- {% if user.enrolled_courses() %}
+        <p> <b>Enrolled Courses: </b></p>
+        {% for enrollment in user.enrolled_courses() %}
+            {% set course = enrollment.get_course() %}
+            {% include '_course.html'%}
+        {% endfor%}
+    {% else %}
+    <p> user is not enrolled in any courses!</p>
+    {%endif%} -->
+
+    <hr>
+
+{% endblock %}
