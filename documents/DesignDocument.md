@@ -121,44 +121,47 @@ The software application is structured into five distinct modules: Client, Model
 
 <!-- Provide a list of the page templates you plan to create and supplement your description with UI sketches or screenshots.  -->
 
+  Note that any use of ' or " in the routes is a replacement of > and < which could not be displayed
   ## Mock Up Pages
   <kbd>
-    Image of login template
+    <h3> Image of faculty/student registration template, multipurpose page, routes = /user/register </h3>
+    <img src="images/register_template.png"></img>
+    <h3> Image of student registration template, multipurpose page, routes = /user/register/student/'user_id' </h3>
+    <img src="images/student_registration_template.png"></img>
+    <h3> Image of login template, routes = /user/login </h3>
     <img src="images/Login.jpg"></img>
-    Image of home template
+    <h3> Image of home template, routes = /,/index </h3>
     <img src="images/Home.jpg"></img>
-    Image of home page with user dashboard dropdown template 
+    <h3> Image of home page with user dashboard dropdown template, multipurpose page routes = /,/index, routes = /user/logout</h3>
     <img src="images/Home_Dropdown.jpg"></img>
-    Image of user profile template
+    <h3> Image of user profile template, routes = /user/"user-id" </h3>
     <img src="images/Profile.png"></img>
-    Image of edit user profile template
+    <h3> Image of edit user profile template, routes = /user/profile/"user-id"/edit </h3>
     <img src="images/Edit_Profile.png"></img>
-    Image of user inbox template
+    <h3> Image of user inbox template, routes = /user/"user-id"/inbox </h3> 
     <img src="images/Inbox.jpg"></img>
-    Image of project submission template
-    <img src="images/Submissions.png"></img>
-    Image of project browser 
+    <h3> Image of project browser, routes =  /project/view </h3>
     <img src="images/Browser.jpg"></img>
-    Image of project search template 
+    <h3> Image of project search template, routes = /project/view </h3>
     <img src="images/Search.png"></img>
-    Image of individual project research page
+    <h3> Image of individual project research page, routes = /project/"project_id"/view </h3>
     <img src="images/Project_Page.png"></img>
-    Image of project proposal page
+    <h3> Image of project proposal page and project edit page, page is multipurpose, routes = /project/create, routes = /project/"project-id"/edit </h3>
     <img src="images/Project_Proposal.jpg"></img>
-    Image of create topic template
+    <h3> Image of create topic and lang template, multipurpose page, routes = /topic/lang/create, routes = 	/project/field/create </h3>
     <img src="images/create_topic.jpg"></img>
-    Image of edit faculty profile template
+    <h3> Image of edit faculty profile template, routes = 	/user/profile/"user-id"/edit </h3>
     <img src="images/edit_faculty_profile.jpg"></img>
-    Image of faculty profile template
-    <img src="images/faculty_profile.jpg"></img>
-    Image of inbox email template
+    <h3> Image of faculty profile template, serves as multipurpose, routes = /user/"faculty_id"/reference, routes =  /user/"user-id" </h3>
+    <img src="images/faculty_profile.png"></img>
+    <h3> Image of inbox email template, routes = /user/"user-id"/inbox </h3>
     <img src="images/inbox_email.jpg"></img>
-    Image of personal statement creation template
+    <h3> Image of personal statement creation and reference creation template, routes = /user/"student_id"/reference
     <img src="images/personal_statement.jpg"></img>
-    Image of individual project applicants template
-    <img src="images/project_applicants.jpg"></img>
-    Image of list of project applicants template
-    <img src="images/project_applicants_list.jpg"></img>
+    <h3> Image of individual project applicants template, routes = /project/"project_id"/applicants/"user_id" </h3> 
+    <img src="images/project_applicants.png"></img> 
+    <h3> Image of list of project applicants template, routes = /project/"project_id"/applicants </h3> 
+    <img src="images/project_applicants_list.png"></img>
     
   </kbd>
 
