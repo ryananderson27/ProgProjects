@@ -34,7 +34,7 @@ Prepared by:
 | Name | Date | Changes | Version |
 | ------ | ------ | --------- | --------- |
 |Revision 1 |2025-02-13 |Initial draft | 1.0        |
-|      |      |         |         |
+|Revision 2 |2025-02-20 |Final draft   | 2.0        |
 
 
 # 1. Introduction
