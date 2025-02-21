@@ -73,7 +73,7 @@ The remaining application logic is divided into three interconnected subsystems.
 
 These subsystems communicate primarily through redirects. The Client sends HTTP requests to the appropriate subsystem endpoints, which process the requests and return responses accordingly.
 
-<img src="images/ComponentDiagramFinal.drawio.png"></img>
+<img src="images/UML_Database_Models.png"></img>
 <!-- Describe the high-level architecture of your software:  i.e., the major components/modules and how they fit together. Provide a UML component diagram that illustrates the architecture of your software. Briefly mention the role of each module in your architectural design. Please refer to the "System Level Design" lectures in Week 4.  -->
 
 ### 2.2.2 Interfaces
