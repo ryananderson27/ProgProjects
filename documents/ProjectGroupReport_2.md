@@ -4,7 +4,7 @@
 
 List team members and their GitHub usernames
 
-* `<member1>`,`<username1>`
+* `Brandon Proteau`,`bproteau1`
 * `<member2>`,`<username2>`
 * `<member3>`,`<username3>`
 * `<Ryan Anderson>`,`<ryananderson27>`
@@ -17,8 +17,18 @@ List team members and their GitHub usernames
 ----
 ## 1. Iteration 2 - Summary
 
- * Include a summary of your `Iteration-2` accomplishments. 
- * List the user stories completed in `Iteration-2`. Mention who worked on those user stories. 
+ <!-- * Include a summary of your `Iteration-2` accomplishments. 
+ * List the user stories completed in `Iteration-2`. Mention who worked on those user stories. -->
+  
+  Last iteration, we found that the scale of our assigned tasks were too great in scope, causing features to be occasionally missed and forgotten. To remedy this issue, we attempted to create 'atomically sized' tasks, which not only were crystal clear what they entailed, but also had no more than exactly one feature each. 
+  
+  This could be assigning someone the task of creating a single new template, or the task of making a new relationship between existing models.
+  This new style of task-writing worked well with our team for both assigning and distributing work and for assisting in ensuring every major use case gets covered. 
+
+  The following are our user stories for this past iteration and our associated tasks, with who they were assigned to.
+  
+ |#|User Story|
+ |-|-|
 
 ----
 ## 2. Iteration 2 - Sprint Retrospective
