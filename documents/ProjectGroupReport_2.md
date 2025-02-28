@@ -23,8 +23,9 @@ List team members and their GitHub usernames
 ----
 ## 2. Iteration 2 - Sprint Retrospective
 
- * Include the outcome of your `Iteration-2 Scrum retrospective meetings`. 
- * Mention the changes the team will be doing to improve itself as a result of the Scrum reflections.
+During this iteration, our team demonstrated strong collaboration and communication. Our Scrum meetings were productive, timely, and consistent, occurring at least four times a week. However, there were areas that needed improvement. One major challenge was task management, as individuals were creating their own tasks rather than assigning them collectively during Scrum meetings. Additionally, branch management was inconsistent, and we encountered issues where there wasn’t always a stable working branch. Another area for improvement was testing, as there were instances where team members didn’t always thoroughly test their own code before merging. 
+
+Moving forward into Iteration 3, we are implementing several changes to address these issues. We will create and assign tasks as a team during Scrum meetings rather than individually. To improve branch management, we will communicate more consistently and ensure that there is always a stable working branch. We will also rigorously test our own code before merging it, preventing issues from propagating. Finally, we will start working on Iteration 3 immediately to maintain momentum and avoid unnecessary delays. By making these adjustments, we aim to enhance our efficiency and overall project workflow.
 
 ----
 ## 3. Product Backlog refinement
