@@ -82,14 +82,14 @@ Moving forward into Iteration 3, we are implementing several changes to address 
 ----
 ## 3. Product Backlog refinement
 
- * Have you made any changes to your `product backlog` after `Iteration-2`? If so, please explain the changes here. 
+ <!-- * Have you made any changes to your `product backlog` after `Iteration-2`? If so, please explain the changes here.  -->
 
 ----
 ## 4. Iteration 3 - Sprint Backlog
 
-Include a draft of your `Iteration-3 sprint backlog`. 
+<!-- Include a draft of your `Iteration-3 sprint backlog`. 
  * List the user stories you plan to complete in `Iteration-3`. Make sure to break down the larger user stories into smaller size stories. Mention the team member(s) who will work on each user story. 
- * Make sure to update the "issues" on your GitHub repo accordingly.  
+ * Make sure to update the "issues" on your GitHub repo accordingly.   -->
 
 | #  | User Story | Assignee |
 |----|-----------|----------|
