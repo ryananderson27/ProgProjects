@@ -82,7 +82,9 @@ Moving forward into Iteration 3, we are implementing several changes to address 
 ----
 ## 3. Product Backlog refinement
 
- <!-- * Have you made any changes to your `product backlog` after `Iteration-2`? If so, please explain the changes here.  -->
+We have not made significant changes to our product backlog after Iteration-2. The primary adjustment involved shifting certain tasks, such as references related to Iteration-3, into Iteration-2 to better align with our workflow. Aside from this, there were no major modifications.
+
+Now that we are transitioning into our final iteration, we are considering some minor updates, including adding tasks for testing, implementing JavaScript, and finalizing other essential features. We will continue to assess and adjust the backlog as needed to support the final stages of development.
 
 ----
 ## 4. Iteration 3 - Sprint Backlog
@@ -94,12 +96,8 @@ Moving forward into Iteration 3, we are implementing several changes to address 
 | #  | User Story | Assignee |
 |----|-----------|----------|
 | 30 | As a faculty member, I would like to view reminders for reference requests so I don't forget any. | Ryan |
-| 29 | As a faculty member, I would like to optionally write a recommendation letter so that I may speak on a student's qualifications. | Matt |
-| 28 | As a faculty member, I would like to accept or reject a student's request for me to recommend them. | Matt |
 | 26 | As a faculty member, I would like to view my inbox so that I can know if a student needs a recommendation from me.  | Chase |
 | 25 | As a student, I would like to check my inbox so I can view acceptance and rejection letters. | Chase |
 | 23 | As a student, I would like to send a reminder to faculty members about reference requests.  | Ryan |
-| 22 | As a faculty member, I would like to view references for students.  | Ryan |
 | 19 | As a student, I would like to check my inbox so that I know if a faculty member has submitted recommendations for me. | Brandon |
-| 13 | As a student, I would like to request letters of recommendation from faculty members so that I can have references for applications. | Brandon |
 | 100 | As a faculty, I would like to sort through my inbox to look for specific recommendation request be it by person, major, or graduating class | Brandon |
