@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% import 'bootstrap_wtf.html' as wtf %}
+
+{% block content %}
+    <h1>Student Information</h1>
+
+    <form action = "{{url_for('auth.studentRegister')}}" method = "POST">
+        {{ form.hidden_tag()}}
+        {{wtf.form_field(form.gpa)}}
+        {{wtf.form_field(form.majors)}}
+        {{wtf.form_field(form.grad)}}
+        {{wtf.form_field(form.register)}}
+    </form>
+
+{% endblock %}
